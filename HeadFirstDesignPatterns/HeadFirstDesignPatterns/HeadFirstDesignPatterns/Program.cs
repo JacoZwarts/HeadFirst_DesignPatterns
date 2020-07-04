@@ -12,7 +12,7 @@ namespace HeadFirstDesignPatterns
             #region Strategy Pattern
             // Strategy Pattern Definition:
             // Defines a family of algorithms encapsulates each one, and make them interchangeable
-            // Strategy lets the algorithm vary independently from the user that use them.
+            // Strategy lets the algorithm vary independently from the clients that use them.
             var mallardDuck = new MallardDuck(new FlyWithWings(), new Quack());
             mallardDuck.Display();
             mallardDuck.PerformFly();
