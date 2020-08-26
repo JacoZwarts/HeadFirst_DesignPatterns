@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HeadFirstDesignPatterns.StrategyPattern\HeadFirstDesignPatterns.StrategyPattern.csproj" />
+    <ProjectReference Include="..\StrategyPatternAdvanced\StrategyPatternAdvanced.csproj" />
   </ItemGroup>
 
 </Project>

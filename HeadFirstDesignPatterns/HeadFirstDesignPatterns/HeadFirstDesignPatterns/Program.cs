@@ -1,7 +1,9 @@
-﻿using System;
-using HeadFirstDesignPatterns.StrategyPattern.Behaviors.Fly;
+﻿using HeadFirstDesignPatterns.StrategyPattern.Behaviors.Fly;
 using HeadFirstDesignPatterns.StrategyPattern.Behaviors.Quack;
 using HeadFirstDesignPatterns.StrategyPattern.DuckTypes;
+using StrategyPatternAdvanced;
+using StrategyPatternAdvanced.Enums;
+using System;
 
 namespace HeadFirstDesignPatterns
 {
@@ -9,7 +11,11 @@ namespace HeadFirstDesignPatterns
     {
         private static void Main(string[] args)
         {
-            #region Strategy Pattern
+            StrategyPatternAdvanced();
+        }
+
+        public static void StrategyPatternBasic()
+        {
             // Strategy Pattern Definition:
             // Defines a family of algorithms encapsulates each one, and make them interchangeable
             // Strategy lets the algorithm vary independently from the clients that use them.
@@ -26,8 +32,16 @@ namespace HeadFirstDesignPatterns
             rubberDuck.PerformFly();
             rubberDuck.PerformQuack();
             rubberDuck.Swim();
+        }
 
-            #endregion Strategy Pattern
+        public static void StrategyPatternAdvanced()
+        {
+            var standardOrder = new PurchaseOrder(new User("Jaco Zwarts", UserTypes.STANDARD), 1000);
+            Console.WriteLine(standardOrder.CalculateOrderPrice());
+            var premiumOrder = new PurchaseOrder(new User("Jaco Zwarts", UserTypes.PREMIUM), 1000);
+            Console.WriteLine(premiumOrder.CalculateOrderPrice());
+            var diamondOrder = new PurchaseOrder(new User("Jaco Zwarts", UserTypes.DIAMOND), 1000);
+            Console.WriteLine(diamondOrder.CalculateOrderPrice());
         }
     }
 }
