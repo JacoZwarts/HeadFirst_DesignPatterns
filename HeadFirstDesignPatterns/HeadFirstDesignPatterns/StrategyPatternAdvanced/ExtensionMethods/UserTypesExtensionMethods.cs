@@ -10,7 +10,6 @@ namespace StrategyPatternAdvanced.ExtensionMethods
     {
         public static DiscountRate GetDiscountRateImplementation(this Enum userType)
         {
-            var fields = typeof(UserTypes).GetFields();
             var attribute = typeof(UserTypes).GetFields()
                 .FirstOrDefault(f => f.Name == userType.ToString())
                 ?.GetCustomAttributes(false).First() as UserTypeAttribute;
