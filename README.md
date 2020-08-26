@@ -1,5 +1,5 @@
 # Head First Design Patterns
-Code for head first design patterns book
+Code for head first design patterns book and other resources.
 
 ## The Strategy Pattern:
 Defines a family of algorithms, encapsulates each one, and make them interchangeable.
